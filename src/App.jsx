@@ -1,10 +1,10 @@
 import { useState } from "react";
 export default function App(){
-  const[show,setShow]=useState(false);
+  const [text,setText]=useState('');
   return(
     <>
-    <button onClick={()=> setShow(!show)}>{show ? 'desafficher' : 'afficher'}</button>
-    {show && <p>text affichee</p>}
+    <input type="text" onChange={(e)=> setText(e.target.value)} />
+    <p>{text}</p>
     </>
   )
 }
