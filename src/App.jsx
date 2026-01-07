@@ -1,11 +1,10 @@
 import { useState } from "react";
 export default function App(){
-  const [count,setCount]=useState(0);
+  const[show,setShow]=useState(false);
   return(
     <>
-    <p>counterrrrr : {count}</p>
-    <button onClick={()=> setCount(count+1)}>incrementer +</button>
-    <button onClick={() => setCount(count-1)}>decrementer -</button>
+    <button onClick={()=> setShow(!show)}>{show ? 'desafficher' : 'afficher'}</button>
+    {show && <p>text affichee</p>}
     </>
   )
 }
